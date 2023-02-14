@@ -3,12 +3,21 @@ import javax.swing.JButton
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JPanel
+import javax.swing.JTextField
 
 fun main(){
-    Board();
+    Board()
 }
 
 class Board: JFrame() {
+    private val ai = AI()
+
+    private var turn = 0 // turn % 2 == 0 -> white's turn
+
+    private val lTurn = JLabel()
+    private val lOptions = JLabel()
+    private val tfPlay = JTextField()
+
     init {
         loadComponents()
         loadProperties()
@@ -21,18 +30,59 @@ class Board: JFrame() {
         btWhite.addActionListener {
             remove(btWhite)
             remove(btBlack)
-            drawCells()
-            addPieces()
+            loadInterface()
             repaint()
         }
         add(btWhite)
 
         btBlack.setBounds(256, 352, 128, 32)
+        btBlack.addActionListener {
+            remove(btWhite)
+            remove(btBlack)
+            loadInterface()
+            runAsBlack()
+        }
         add(btBlack)
     }
 
-    fun addPieces() {
-        
+    private fun loadInterface() {
+        drawCells()
+
+        lTurn.setBounds(600, 60, 200, 32)
+        add(lTurn)
+
+        val lOptionsText = JLabel("Options")
+        lOptionsText.setBounds(600, 100, 200, 32)
+        add(lOptionsText)
+
+        lOptions.setBounds(600, 140, 200, 32)
+        add(lOptions)
+
+        tfPlay.setBounds(600, 540, 150, 32)
+        tfPlay.addActionListener {
+            nextTurn()
+            tfPlay.text = ""
+        }
+        add(tfPlay)
+
+        updateUI()
+    }
+
+    private fun nextTurn() {
+        ai.play(turn, tfPlay.text)
+        turn++
+        updateUI()
+    }
+
+    private fun runAsBlack() {
+        ai.setPlayer(1)
+        updateUI()
+    }
+
+    private fun updateUI() {
+        lTurn.text = if(turn % 2 == 0) "White's turn" else "Black's turn"
+        lOptions.text = ai.getOptions(turn)
+        repaint()
     }
 
     fun drawCells() {
@@ -65,8 +115,8 @@ class Board: JFrame() {
         }
     }
 
-    fun loadProperties() {
-        setSize(660, 680)
+    private fun loadProperties() {
+        setSize(1000, 680)
         setLocationRelativeTo(null)
         layout = null
         isVisible = true
