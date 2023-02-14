@@ -5,10 +5,6 @@ import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.JTextField
 
-fun main(){
-    Board()
-}
-
 class Board: JFrame() {
     private val ai = AI()
 
