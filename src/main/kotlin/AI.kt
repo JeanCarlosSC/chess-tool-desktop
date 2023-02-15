@@ -14,7 +14,9 @@ class AI {
     }
 
     private fun loadRecord() {
-        addToBlack(listOf("e5", "e4", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Bd2", "Bxd2+", "Nbxd2", "d5"))
+        addToBlack(listOf("e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Bd2", "Bxd2+", "Nbxd2", "d5"))
+
+        addToWhite(listOf("e4", "e5", "Nf3", "Nc6", "Bc4", "Nd4", "Nxe5", "Qg5", "Bxf7+"))
     }
 
     private fun addToBlack(list: List<String>) {

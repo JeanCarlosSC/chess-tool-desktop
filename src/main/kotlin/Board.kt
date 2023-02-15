@@ -22,16 +22,16 @@ class Board: JFrame() {
         val btWhite = JButton("Play as white")
         val btBlack = JButton("Play as black")
 
-        btWhite.setBounds(256, 224, 128, 32)
+        btWhite.setBounds(320, 224, 128, 32)
         btWhite.addActionListener {
             remove(btWhite)
             remove(btBlack)
             loadInterface()
-            repaint()
+            runAsWhite()
         }
         add(btWhite)
 
-        btBlack.setBounds(256, 352, 128, 32)
+        btBlack.setBounds(320, 352, 128, 32)
         btBlack.addActionListener {
             remove(btWhite)
             remove(btBlack)
@@ -67,6 +67,11 @@ class Board: JFrame() {
     private fun nextTurn() {
         ai.play(turn, tfPlay.text)
         turn++
+        updateUI()
+    }
+
+    private fun runAsWhite() {
+        ai.setPlayer(0)
         updateUI()
     }
 
