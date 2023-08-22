@@ -3,7 +3,6 @@
 *.kotlin_module
 *.jar
 *.MF
-*.iml
 
 *.idea/
 *out/
