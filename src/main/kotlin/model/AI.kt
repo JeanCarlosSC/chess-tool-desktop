@@ -1,12 +1,12 @@
 package model
 
-class Node (public val movement: String) {
+class Node (val movement: String) {
     val nodes = mutableListOf<Node>()
 
     override fun toString(): String {
         var str = ""
         for (i in nodes) {
-            str += i.movement+ " - "
+            str += " - ${i.movement}"
         }
         return str
     }
@@ -60,4 +60,6 @@ fun loadAI() {
             "Bxd2+", "Nbxd2", "d5"))
     blackTree.add(listOf("c4","e5","g3","Nf6", "Nc3", "d5", "cxd5", "Nxd5", "Bg2", "c6", "Nxd5", "cxd5", "e3",
             "Bc5", "Qh5", "Nc6"))
+    blackTree.add(listOf("d4","d5","Bf4","Nf6","Qd3","Nc6","e3","e6","Na3","Bb4+"))
+    blackTree.add(listOf("e4", "e5", "Nf3", "Nc6", "Bd3", "d5", "exd5", "Qxd5", "O-O", "Bg4"))
 }
