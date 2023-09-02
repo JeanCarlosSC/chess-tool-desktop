@@ -6,8 +6,6 @@ import javax.swing.JPanel
 import javax.swing.JTextField
 
 class Board: JFrame() {
-    private val ai = AI()
-
     private var turn = 0 // turn % 2 == 0 -> white's turn
 
     private val lTurn = JLabel()
@@ -65,24 +63,24 @@ class Board: JFrame() {
     }
 
     private fun nextTurn() {
-        ai.play(turn, tfPlay.text)
+        //AI.play(turn, tfPlay.text)
         turn++
         updateUI()
     }
 
     private fun runAsWhite() {
-        ai.setPlayer(0)
+        //ai.setPlayer(0)
         updateUI()
     }
 
     private fun runAsBlack() {
-        ai.setPlayer(1)
+        //ai.setPlayer(1)
         updateUI()
     }
 
     private fun updateUI() {
         lTurn.text = if(turn % 2 == 0) "White's turn" else "Black's turn"
-        lOptions.text = ai.getOptions(turn)
+        //lOptions.text = ai.getOptions(turn)
         repaint()
     }
 
