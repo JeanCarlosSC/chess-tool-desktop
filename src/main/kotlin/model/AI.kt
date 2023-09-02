@@ -1,48 +1,12 @@
 package model
 
-class Node (val movement: String) {
-    val nodes = mutableListOf<Node>()
-
-    override fun toString(): String {
-        var str = ""
-        for (i in nodes) {
-            str += " - ${i.movement}"
-        }
-        return str
-    }
-
-    fun add(listOf: List<String>) {
-        for (node in nodes) {
-            if (node.movement == listOf[0]) {
-                if(listOf.size>1) {
-                    node.add(listOf.subList(1, listOf.lastIndex))
-                }
-                return
-            }
-        }
-        if(listOf.isNotEmpty()) {
-            val node = Node(listOf[0])
-            if (listOf.size > 1) {
-                node.add(listOf.subList(1, listOf.lastIndex))
-            }
-            nodes.add(node)
-        }
-    }
-
-    fun getNode(movement: String?): Node? {
-        for (node in nodes) {
-            if (node.movement == movement) {
-                return node
-            }
-        }
-        return null
-    }
-}
-
-val whiteTree = Node("")
-val blackTree = Node("")
+val whiteTree = Move("")
+val blackTree = Move("")
 
 fun loadAI() {
+    loadWhiteTree()
+
+    // Other games
     whiteTree.add(listOf("e4", "e5", "d4", "Qh4", "Nf3"))
     whiteTree.add(listOf("e4", "e5", "Nc3", "c6", "Nf3", "h6", "Nxe5", "Qf6", "d4", "Bb4", "Bc4", "Rh7", "Bxf7+", "Ke7",
             "Qh5", "Bxc3+", "Bxc3", "g6", "Bxg6", "Rg7", "g4"))
@@ -55,6 +19,9 @@ fun loadAI() {
     whiteTree.add(listOf("e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Nxd4", "Qxd4", "Nf6", "e5"))
     whiteTree.add(listOf("e4", "e5", "Nf3", "Nc6", "d4", "f6", "d5", "Nd4", "Nxd4", "exd4", "Qxd4"))
     whiteTree.add(listOf("e4", "e5", "Nf3", "Nf6", "d4", "exd4", "Qxd4", "Qe7", "Nc3"))
+    whiteTree.add(listOf("e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "d4", "d6", "d5", "Nd4", "Nxd4", "exd4", "Qxd4", "c5",
+            "Qd1", "Nxe4", "Qe2"))
+    whiteTree.add(listOf("e4", "e5", "Nc3", "Nf6", "Bc4", "Bc5", "Nf3", "d6", "Ng5", "Bg4", "Bxf7+"))
 
     blackTree.add(listOf("e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Bd2",
             "Bxd2+", "Nbxd2", "d5"))
@@ -62,4 +29,40 @@ fun loadAI() {
             "Bc5", "Qh5", "Nc6"))
     blackTree.add(listOf("d4","d5","Bf4","Nf6","Qd3","Nc6","e3","e6","Na3","Bb4+"))
     blackTree.add(listOf("e4", "e5", "Nf3", "Nc6", "Bd3", "d5", "exd5", "Qxd5", "O-O", "Bg4"))
+}
+
+fun loadWhiteTree() {
+    whiteTree.add(listOf(
+        // King's Pawn Opening
+        Move("e4", BOOK).add(listOf(
+            // Last book move
+            Move("e5", BOOK).add(listOf(
+                Move("Qh5", GOOD).add(listOf(
+                    Move("Bb4", BLUNDER).add(listOf(
+                        Move("Qxe5+", BEST)
+                    ))
+                ))
+            ))
+        )),
+        // Queen's Pawn Opening
+        Move("d4", BOOK).add(listOf(
+            // Mikėnas Defense
+            Move("Nc6", BOOK).add(listOf(
+                Move("d5", BOOK).add(listOf(
+                    // Last book move
+                    Move("Ne5", BOOK).add(listOf(
+                        Move("Bf4", GOOD).add(listOf(
+                            Move("d6", EXCELLENT).add(listOf(
+                                Move("e4", BEST).add(listOf(
+                                    Move("Nf6", BEST).add(listOf(
+                                        Move("Nc3", BEST)
+                                    ))
+                                ))
+                            ))
+                        ))
+                    ))
+                ))
+            ))
+        ))
+    ))
 }

@@ -1,4 +1,4 @@
-import view.Console;
+import view.ConsoleGame;
 import view.Frame;
 
 import java.util.Scanner;
@@ -13,7 +13,7 @@ public class Main {
             new Frame();
         }
         else {
-            new Console();
+            new ConsoleGame();
         }
 
     }

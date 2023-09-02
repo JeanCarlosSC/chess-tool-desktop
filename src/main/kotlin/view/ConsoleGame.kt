@@ -1,13 +1,13 @@
 package view
 
 import Main.s
-import model.Node
+import model.Move
 import model.blackTree
 import model.loadAI
 import model.whiteTree
 
-class Console {
-    var head: Node
+class ConsoleGame {
+    private var head: Move
 
     init {
         loadAI()
@@ -23,14 +23,14 @@ class Console {
             println(head.toString())
             print("$ ")
             val input1 = s.nextLine()
-            val newNode = head.getNode(input1)
-            if(newNode != null) {
-                head = newNode
+            val newMove = head.getMove(input1)
+            if(newMove != null) {
+                head = newMove
             }
             else {
                 break
             }
-        } while (head.nodes.isNotEmpty())
+        } while (head.moves.isNotEmpty())
         println("Hasta aquí le podemos ayudar, hasta luego")
     }
 }
