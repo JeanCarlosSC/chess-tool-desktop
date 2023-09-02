@@ -13,17 +13,40 @@ fun loadAI() {
                         Move("Nf3", BEST).add(listOf(
                             Move("d6", EXCELLENT).add(listOf(
                                 Move("Bb5", BEST),
-                                    Move("d4", INACCURACY)
+                                Move("d4", INACCURACY)
                             ))
                         ))
                     ))
                 ))
             )),
-            // Last book move
             Move("e5", BOOK).add(listOf(
+                // Last book move
+                Move("Nf3", BOOK).add(listOf(
+                    Move("d5", GOOD).add(listOf(
+                        Move("exd5", BEST),
+                        Move("Nc3", INACCURACY)
+                    ))
+                )),
                 Move("Qh5", GOOD).add(listOf(
                     Move("Bb4", BLUNDER).add(listOf(
                         Move("Qxe5+", BEST)
+                    ))
+                ))
+            )),
+            Move("d5", BOOK).add(listOf(
+                // Last book move
+                Move("e5", BOOK).add(listOf(
+                    Move("d4", EXCELLENT).add(listOf(
+                        Move("Nf3", BEST).add(listOf(
+                            Move("Nc6", BEST).add(listOf(
+                                Move("b3", GOOD).add(listOf(
+                                    Move("Qd5", GOOD).add(listOf(
+                                        Move("Bc4", BEST),
+                                        Move("Bb2", MISTAKE)
+                                    ))
+                                ))
+                            ))
+                        ))
                     ))
                 ))
             ))

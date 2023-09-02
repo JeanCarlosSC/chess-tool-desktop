@@ -28,28 +28,8 @@ class Move (
         return str
     }
 
-    fun add(listOf: List<Any>): Move {
-        for (move in moves) {
-            if ((listOf[0] is String && move.position == listOf[0] as String) ||
-                    (listOf[0] is Move && move.position == (listOf[0] as Move).position)) {
-                if(listOf.size>1) {
-                    move.add(listOf.subList(1, listOf.lastIndex))
-                }
-                return this
-            }
-        }
-
-        if(listOf.isNotEmpty()) {
-            val move = if(listOf[0] is String) {
-                Move(listOf[0] as String)
-            }
-            else {
-                listOf[0] as Move
-            }
-
-            if (listOf.size > 1) {
-                move.add(listOf.subList(1, listOf.lastIndex+1))
-            }
+    fun add(moveList: List<Move>): Move {
+        for (move in moveList) {
             moves.add(move)
         }
         return this
