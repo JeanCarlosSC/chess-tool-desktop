@@ -46,6 +46,22 @@ fun loadWhiteTree() {
         )),
         // Queen's Pawn Opening
         Move("d4", BOOK).add(listOf(
+            Move("d5", BOOK).add(listOf(
+                Move("c4", BOOK).add(listOf(
+                    Move("Nf6", BOOK).add(listOf(
+                        Move("cxd5", BOOK).add(listOf(
+                            Move("Nxd5", BOOK).add(listOf(
+                                Move("Nc3", BOOK).add(listOf(
+                                    // Last book move
+                                    Move("Nc6", BOOK).add(listOf(
+                                        Move("Nf3", BEST)
+                                    ))
+                                ))
+                            ))
+                        ))
+                    ))
+                ))
+            )),
             // Mikėnas Defense
             Move("Nc6", BOOK).add(listOf(
                 Move("d5", BOOK).add(listOf(
