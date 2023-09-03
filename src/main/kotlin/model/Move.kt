@@ -1,7 +1,7 @@
 package model
 
 // Move types
-const val UNKNOWN = 0
+const val FORCED = 0
 const val BLUNDER = 1
 const val MISS = 2
 const val MISTAKE = 3

@@ -113,6 +113,89 @@ fun loadAI() {
                                 ))
                             ))
                         ))
+                    )),
+                    Move("Qh4", MISTAKE).add(listOf(
+                        Move("Nc3", BEST).add(listOf(
+                            Move("Bb4", BEST).add(listOf(
+                                Move("Bd3", BEST).add(listOf(
+                                    Move("Nc6", BEST).add(listOf(
+                                        Move("Nf3", BEST).add(listOf(
+                                            Move("Qg4", INACCURACY).add(listOf(
+                                                Move("O-O", GOOD).add(listOf(
+                                                    Move("Nge7", MISTAKE).add(listOf(
+                                                        Move("Ne2", BEST).add(listOf(
+                                                            Move("O-O", INACCURACY).add(listOf(
+                                                                Move("c3", GOOD).add(listOf(
+                                                                    Move("Bd6", GOOD).add(listOf(
+                                                                        Move("e5", BEST).add(listOf(
+                                                                            Move("f5", EXCELLENT).add(listOf(
+                                                                                Move("exd6", BEST).add(listOf(
+                                                                                    Move("cxd6", BEST).add(listOf(
+                                                                                        Move("Nf4", EXCELLENT).add(listOf(
+                                                                                            Move("g5", EXCELLENT).add(listOf(
+                                                                                                Move("h3", BEST).add(listOf(
+                                                                                                    Move("Qxf4", BEST).add(listOf(
+                                                                                                        Move("Bxf4", BEST).add(listOf(
+                                                                                                            Move("gxf4", BEST).add(listOf(
+                                                                                                                Move("Qd2", EXCELLENT).add(listOf(
+                                                                                                                    Move("Nd5", EXCELLENT).add(listOf(
+                                                                                                                        Move("c4", BEST).add(listOf(
+                                                                                                                            Move("Ndb4", EXCELLENT).add(listOf(
+                                                                                                                                Move("Be2", BEST).add(listOf(
+                                                                                                                                    Move("e5", EXCELLENT).add(listOf(
+                                                                                                                                        Move("d5", EXCELLENT).add(listOf(
+                                                                                                                                            Move("a5", EXCELLENT).add(listOf(
+                                                                                                                                                Move("dxc6", BEST).add(listOf(
+                                                                                                                                                    Move("dxc6", EXCELLENT).add(listOf(
+                                                                                                                                                        Move("Qxd6", BEST).add(listOf(
+                                                                                                                                                            Move("e4", EXCELLENT).add(listOf(
+                                                                                                                                                                Move("Ng5", BEST).add(listOf(
+                                                                                                                                                                    Move("Nc2", GOOD).add(listOf(
+                                                                                                                                                                        Move("Qe7", BEST).add(listOf(
+                                                                                                                                                                            Move("Rd8", INACCURACY).add(listOf(
+                                                                                                                                                                                Move("Qxh7+", BEST).add(listOf(
+                                                                                                                                                                                    Move("Kf8", FORCED).add(listOf(
+                                                                                                                                                                                        Move("Qf7#", BEST)
+                                                                                                                                                                                    ))
+                                                                                                                                                                                ))
+                                                                                                                                                                            ))
+                                                                                                                                                                        ))
+                                                                                                                                                                    ))
+                                                                                                                                                                ))
+                                                                                                                                                            ))
+                                                                                                                                                        ))
+                                                                                                                                                    ))
+                                                                                                                                                ))
+                                                                                                                                            ))
+                                                                                                                                        ))
+                                                                                                                                    ))
+                                                                                                                                ))
+                                                                                                                            ))
+                                                                                                                        ))
+                                                                                                                    ))
+                                                                                                                ))
+                                                                                                            ))
+                                                                                                        ))
+                                                                                                    ))
+                                                                                                ))
+                                                                                            ))
+                                                                                        ))
+                                                                                    ))
+                                                                                ))
+                                                                            ))
+                                                                        ))
+                                                                    ))
+                                                                ))
+                                                            ))
+                                                        ))
+                                                    ))
+                                                ))
+                                            ))
+                                        ))
+                                    ))
+                                ))
+                            ))
+                        ))
                     ))
                 ))
             )),
