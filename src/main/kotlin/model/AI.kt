@@ -4,46 +4,53 @@ val tree = Move("")
 
 fun loadAI() {
     tree.add(listOf(
-        // Queen's Pawn Opening
-        Move("d4", BOOK).add(listOf(
-            Move("d5", BOOK).add(listOf(
-                Move("c4", BOOK).add(listOf(
-                    Move("Nf6", BOOK).add(listOf(
-                        Move("cxd5", BOOK).add(listOf(
-                            Move("Nxd5", BOOK).add(listOf(
-                                Move("Nc3", BOOK).add(listOf(
-                                    // Last book move
-                                    Move("Nc6", BOOK).add(listOf(
-                                        Move("Nf3", BEST)
-                                    ))
-                                ))
-                            ))
-                        ))
-                    ))
-                ))
-            )),
-            // Mikėnas Defense
-            Move("Nc6", BOOK).add(listOf(
-                Move("d5", BOOK).add(listOf(
-                    // Last book move
-                    Move("Ne5", BOOK).add(listOf(
-                        Move("Bf4", GOOD).add(listOf(
-                            Move("d6", EXCELLENT).add(listOf(
-                                Move("e4", BEST).add(listOf(
-                                    Move("Nf6", BEST).add(listOf(
-                                        Move("Nc3", BEST)
-                                    ))
-                                ))
-                            ))
-                        ))
-                    ))
-                ))
-            ))
-        )),
         // King's Pawn Opening
         Move("e4", BOOK).add(listOf(
-            // Last book move
+            // Sicilian Defense
             Move("c5", BOOK).add(listOf(
+                Move("Nf3", BOOK).add(listOf(
+                    Move("d6", BOOK).add(listOf(
+                        Move("Nc3", BOOK).add(listOf(
+                            Move("Nf6", BOOK).add(listOf(
+                                Move("d4", BOOK).add(listOf(
+                                    Move("cxd4", BOOK).add(listOf(
+                                        Move("Qxd4", BOOK).add(listOf(
+                                            // Last book move
+                                            Move("Nc6", BOOK).add(listOf(
+                                                Move("Qd3", GOOD).add(listOf(
+                                                    Move("Qb6", INACCURACY).add(listOf(
+                                                        Move("Be2", BEST).add(listOf(
+                                                            Move("Be6", MISTAKE).add(listOf(
+                                                                Move("O-O", BEST).add(listOf(
+                                                                    Move("Nb4", BEST).add(listOf(
+                                                                        Move("Qd1", BEST).add(listOf(
+                                                                            Move("Nc6", GOOD).add(listOf(
+                                                                                Move("Nd5", EXCELLENT).add(listOf(
+                                                                                    Move("Qd8", BEST).add(listOf(
+                                                                                        Move("c4", BEST).add(listOf(
+                                                                                            Move("Nxe4", GOOD).add(listOf(
+                                                                                                Move("Re1", BEST),
+                                                                                                Move("Nd4", INACCURACY)
+                                                                                            ))
+                                                                                        ))
+                                                                                    ))
+                                                                                ))
+                                                                            ))
+                                                                        ))
+                                                                    ))
+                                                                ))
+                                                            ))
+                                                        ))
+                                                    ))
+                                                ))
+                                            ))
+                                        ))
+                                    ))
+                                ))
+                            ))
+                        ))
+                    ))
+                )),
                 Move("e5", GOOD).add(listOf(
                     Move("Nc6", EXCELLENT).add(listOf(
                         Move("Nf3", BEST).add(listOf(
@@ -209,6 +216,42 @@ fun loadAI() {
                                     Move("Qd5", GOOD).add(listOf(
                                         Move("Bc4", BEST),
                                         Move("Bb2", MISTAKE)
+                                    ))
+                                ))
+                            ))
+                        ))
+                    ))
+                ))
+            ))
+        )),
+        // Queen's Pawn Opening
+        Move("d4", BOOK).add(listOf(
+            Move("d5", BOOK).add(listOf(
+                Move("c4", BOOK).add(listOf(
+                    Move("Nf6", BOOK).add(listOf(
+                        Move("cxd5", BOOK).add(listOf(
+                            Move("Nxd5", BOOK).add(listOf(
+                                Move("Nc3", BOOK).add(listOf(
+                                    // Last book move
+                                    Move("Nc6", BOOK).add(listOf(
+                                        Move("Nf3", BEST)
+                                    ))
+                                ))
+                            ))
+                        ))
+                    ))
+                ))
+            )),
+            // Mikėnas Defense
+            Move("Nc6", BOOK).add(listOf(
+                Move("d5", BOOK).add(listOf(
+                    // Last book move
+                    Move("Ne5", BOOK).add(listOf(
+                        Move("Bf4", GOOD).add(listOf(
+                            Move("d6", EXCELLENT).add(listOf(
+                                Move("e4", BEST).add(listOf(
+                                    Move("Nf6", BEST).add(listOf(
+                                        Move("Nc3", BEST)
                                     ))
                                 ))
                             ))
