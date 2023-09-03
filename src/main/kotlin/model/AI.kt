@@ -4,8 +4,42 @@ val tree = Move("")
 
 fun loadAI() {
     tree.add(listOf(
-        // Réti Opening
-        Move("Nf3"),
+        // Queen's Pawn Opening
+        Move("d4", BOOK).add(listOf(
+            Move("d5", BOOK).add(listOf(
+                Move("c4", BOOK).add(listOf(
+                    Move("Nf6", BOOK).add(listOf(
+                        Move("cxd5", BOOK).add(listOf(
+                            Move("Nxd5", BOOK).add(listOf(
+                                Move("Nc3", BOOK).add(listOf(
+                                    // Last book move
+                                    Move("Nc6", BOOK).add(listOf(
+                                        Move("Nf3", BEST)
+                                    ))
+                                ))
+                            ))
+                        ))
+                    ))
+                ))
+            )),
+            // Mikėnas Defense
+            Move("Nc6", BOOK).add(listOf(
+                Move("d5", BOOK).add(listOf(
+                    // Last book move
+                    Move("Ne5", BOOK).add(listOf(
+                        Move("Bf4", GOOD).add(listOf(
+                            Move("d6", EXCELLENT).add(listOf(
+                                Move("e4", BEST).add(listOf(
+                                    Move("Nf6", BEST).add(listOf(
+                                        Move("Nc3", BEST)
+                                    ))
+                                ))
+                            ))
+                        ))
+                    ))
+                ))
+            ))
+        )),
         // King's Pawn Opening
         Move("e4", BOOK).add(listOf(
             // Last book move
@@ -100,41 +134,11 @@ fun loadAI() {
                 ))
             ))
         )),
-        // Queen's Pawn Opening
-        Move("d4", BOOK).add(listOf(
-            Move("d5", BOOK).add(listOf(
-                Move("c4", BOOK).add(listOf(
-                    Move("Nf6", BOOK).add(listOf(
-                        Move("cxd5", BOOK).add(listOf(
-                            Move("Nxd5", BOOK).add(listOf(
-                                Move("Nc3", BOOK).add(listOf(
-                                    // Last book move
-                                    Move("Nc6", BOOK).add(listOf(
-                                        Move("Nf3", BEST)
-                                    ))
-                                ))
-                            ))
-                        ))
-                    ))
-                ))
-            )),
-            // Mikėnas Defense
-            Move("Nc6", BOOK).add(listOf(
-                Move("d5", BOOK).add(listOf(
-                    // Last book move
-                    Move("Ne5", BOOK).add(listOf(
-                        Move("Bf4", GOOD).add(listOf(
-                            Move("d6", EXCELLENT).add(listOf(
-                                Move("e4", BEST).add(listOf(
-                                    Move("Nf6", BEST).add(listOf(
-                                        Move("Nc3", BEST)
-                                    ))
-                                ))
-                            ))
-                        ))
-                    ))
-                ))
-            ))
-        ))
+        Move("Nc3", BOOK).add(listOf(
+            Move("d5", BEST),
+            Move("Nc6", GOOD)
+        )),
+        // Réti Opening
+        Move("Nf3", BOOK)
     ))
 }
