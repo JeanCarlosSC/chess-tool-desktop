@@ -1,6 +1,6 @@
 package model
 
-val tree = Move("")
+val tree = Move("", 0)
 
 fun loadAI() {
     tree.add(listOf(
@@ -63,7 +63,6 @@ fun loadAI() {
                 ))
             )),
             Move("e5", BOOK).add(listOf(
-                // Last book move
                 Move("Nf3", BOOK).add(listOf(
                     Move("Nc6", BOOK).add(listOf(
                         // Last book move
@@ -81,6 +80,25 @@ fun loadAI() {
                     Move("d5", GOOD).add(listOf(
                         Move("exd5", BEST),
                         Move("Nc3", INACCURACY)
+                    )),
+                    // Philidor's defense
+                    Move("d6", BOOK).add(listOf(
+                        Move("d4", BOOK).add(listOf(
+                            Move("exd4", BOOK).add(listOf(
+                                Move("Qxd4", BOOK).add(listOf(
+                                    // Last book move
+                                    Move("Nc6", BOOK).add(listOf(
+                                        Move("Bb5", BEST),
+                                        Move("Qd1", EXCELLENT).add(listOf(
+                                            Move("Nf6", EXCELLENT).add(listOf(
+                                                Move("Bd3", BEST),
+                                                Move("e5", MISTAKE)
+                                            ))
+                                        ))
+                                    ))
+                                ))
+                            ))
+                        ))
                     ))
                 )),
                 Move("Qh5", GOOD).add(listOf(

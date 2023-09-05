@@ -15,7 +15,7 @@ const val BRILLIANT = 10
 
 class Move (
         private val position: String,
-        private val type : Int = UNKNOWN
+        private val type : Int
 ) {
 
     val moves = mutableListOf<Move>()
