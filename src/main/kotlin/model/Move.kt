@@ -28,7 +28,7 @@ class Move (
         return str
     }
 
-    fun add(moveList: List<Move>): Move {
+    fun add(vararg moveList: Move): Move {
         for (move in moveList) {
             moves.add(move)
         }
