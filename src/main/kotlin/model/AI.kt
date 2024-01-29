@@ -4,10 +4,8 @@ val tree = Move("", 0)
 
 fun loadAI() {
     tree.add(
-        // King's Pawn Opening
-        Move("e4", BOOK).add(
-            // Sicilian Defense
-            Move("c5", BOOK).add(
+        Move("e4", BOOK, "King's Pawn Opening").add(
+            Move("c5", BOOK, "Sicilian Defense").add(
                 Move("Nf3", BOOK).add(
                     Move("d6", BOOK).add(
                         Move("Nc3", BOOK).add(
@@ -15,8 +13,7 @@ fun loadAI() {
                                 Move("d4", BOOK).add(
                                     Move("cxd4", BOOK).add(
                                         Move("Qxd4", BOOK).add(
-                                            // Last book move
-                                            Move("Nc6", BOOK).add(
+                                            Move("Nc6", BOOK, "Last book move").add(
                                                 Move("Qd3", GOOD).add(
                                                     Move("Qb6", INACCURACY).add(
                                                         Move("Be2", BEST).add(
@@ -62,9 +59,8 @@ fun loadAI() {
                     )
                 )
             ),
-            Move("d5", BOOK).add(
-                // Last book move
-                Move("e5", BOOK).add(
+            Move("d5", BOOK, "Scandinavian Defense").add(
+                Move("e5", BOOK, "Last book move").add(
                     Move("d4", EXCELLENT).add(
                         Move("Nf3", BEST).add(
                             Move("Nc6", BEST).add(
@@ -79,6 +75,30 @@ fun loadAI() {
                     )
                 ),
                 Move("exd5", BEST),
+                Move("Nc3", BOOK).add(
+                    Move("d4", BOOK).add(
+                        Move("Nce2", BOOK).add(
+                            Move("e5", BOOK, "Last book move").add(
+                                Move("f4", EXCELLENT).add(
+                                    Move("Nf6", BEST).add(
+                                        Move("g3", GOOD).add(
+                                            Move("Nc6", GOOD).add(
+                                                Move("c3", MISTAKE).add(
+                                                    Move("Nxe4", GREAT).add(
+                                                        Move("Bg2", GOOD).add(
+                                                            Move("Bf5", INACCURACY),
+                                                            Move("Nc5", BEST)
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
                 Move("Qf3", INACCURACY).add(
                     Move("dxe4", BEST),
                     Move("Nf6", INACCURACY).add(
@@ -102,8 +122,7 @@ fun loadAI() {
             Move("e5", BOOK).add(
                 Move("Nf3", BOOK).add(
                     Move("Nc6", BOOK).add(
-                        // Last book move
-                        Move("Bc4", BOOK).add(
+                        Move("Bc4", BOOK, "Last book move").add(
                             Move("h6", GOOD).add(
                                 Move("d4", BEST).add(
                                     Move("Bd6", INACCURACY).add(
@@ -118,13 +137,11 @@ fun loadAI() {
                         Move("exd5", BEST),
                         Move("Nc3", INACCURACY)
                     ),
-                    // Philidor's defense
-                    Move("d6", BOOK).add(
+                    Move("d6", BOOK, "Philidor's defense").add(
                         Move("d4", BOOK).add(
                             Move("exd4", BOOK).add(
                                 Move("Qxd4", BOOK).add(
-                                    // Last book move
-                                    Move("Nc6", BOOK).add(
+                                    Move("Nc6", BOOK, "Last book move").add(
                                         Move("Bb5", BEST),
                                         Move("Qd1", EXCELLENT).add(
                                             Move("Nf6", EXCELLENT).add(
@@ -144,14 +161,12 @@ fun loadAI() {
                     )
                 )
             ),
-            // The French defense
-            Move("e6", BOOK).add(
+            Move("e6", BOOK, "The French defense").add(
                 Move("d4", BOOK).add(
                     Move("d5", BOOK).add(
                         Move("Nc3", BOOK).add(
                             Move("dxe4", BOOK).add(
-                                // Last book move
-                                Move("Nxe4", BOOK).add(
+                                Move("Nxe4", BOOK, "Last book move").add(
                                     Move("Bb4+", INACCURACY).add(
                                         Move("c3", BEST).add(
                                             Move("Be7", BEST).add(
@@ -262,16 +277,14 @@ fun loadAI() {
                 )
             )
         ),
-        // Queen's Pawn Opening
-        Move("d4", BOOK).add(
+        Move("d4", BOOK, "Queen's Pawn Opening").add(
             Move("d5", BOOK).add(
                 Move("c4", BOOK).add(
                     Move("Nf6", BOOK).add(
                         Move("cxd5", BOOK).add(
                             Move("Nxd5", BOOK).add(
                                 Move("Nc3", BOOK).add(
-                                    // Last book move
-                                    Move("Nc6", BOOK).add(
+                                    Move("Nc6", BOOK, "Last book move").add(
                                         Move("Nf3", BEST)
                                     )
                                 )
@@ -280,11 +293,9 @@ fun loadAI() {
                     )
                 )
             ),
-            // Mikėnas Defense
-            Move("Nc6", BOOK).add(
+            Move("Nc6", BOOK, "Mikėnas Defense").add(
                 Move("d5", BOOK).add(
-                    // Last book move
-                    Move("Ne5", BOOK).add(
+                    Move("Ne5", BOOK, "Last book move").add(
                         Move("Bf4", GOOD).add(
                             Move("d6", EXCELLENT).add(
                                 Move("e4", BEST).add(
@@ -302,7 +313,6 @@ fun loadAI() {
             Move("d5", BEST),
             Move("Nc6", GOOD)
         ),
-        // Réti Opening
-        Move("Nf3", BOOK)
+        Move("Nf3", BOOK, "Réti Opening")
     )
 }

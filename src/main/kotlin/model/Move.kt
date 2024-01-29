@@ -15,7 +15,8 @@ const val BRILLIANT = 10
 
 class Move (
         private val position: String,
-        private val type : Int
+        private val type : Int,
+        private val additionalInfo: String = ""
 ) {
 
     val moves = mutableListOf<Move>()
@@ -23,7 +24,7 @@ class Move (
     override fun toString(): String {
         var str = ""
         for (move in moves) {
-            str += " • ${move.position} ${move.getType()}"
+            str += "\n • ${move.position} ${move.getType()} (${move.additionalInfo})"
         }
         return str
     }
