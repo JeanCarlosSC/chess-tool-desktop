@@ -6,6 +6,22 @@ fun loadAI() {
     tree.add(
         Move("e4", BOOK, "King's Pawn Opening").add(
             Move("c5", BOOK, "Sicilian Defense").add(
+                Move("Bc4", BOOK, "Bowdler Attack").add(
+                    Move("e6", BOOK, "Last book move").add(
+                        Move("Nf3", BEST).add(
+                            Move("d5", EXCELLENT).add(
+                                Move("exd5", EXCELLENT).add(
+                                    Move("exd5", BEST).add(
+                                        Move("Bb3", EXCELLENT).add(
+                                            Move("b5", INACCURACY),
+                                            Move("Nc6", BEST)
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
                 Move("Nf3", BOOK).add(
                     Move("d6", BOOK).add(
                         Move("Nc3", BOOK).add(
