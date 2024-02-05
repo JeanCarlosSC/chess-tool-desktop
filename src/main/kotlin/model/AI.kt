@@ -155,6 +155,7 @@ fun loadAI() {
                     ),
                     Move("d6", BOOK, "Philidor's defense").add(
                         Move("d4", BOOK).add(
+                            Move("Bg4", INACCURACY),
                             Move("exd4", BOOK).add(
                                 Move("Qxd4", BOOK).add(
                                     Move("Nc6", BOOK, "Last book move").add(
