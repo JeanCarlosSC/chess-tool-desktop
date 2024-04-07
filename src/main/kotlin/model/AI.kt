@@ -23,6 +23,7 @@ fun loadAI() {
                     )
                 ),
                 Move("Nf3", BOOK).add(
+                    Move("d5", INACCURACY),
                     Move("d6", BOOK).add(
                         Move("Nc3", BOOK).add(
                             Move("Nf6", BOOK).add(
