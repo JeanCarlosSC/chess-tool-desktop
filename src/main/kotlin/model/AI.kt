@@ -137,6 +137,18 @@ fun loadAI() {
                 )
             ),
             Move("e5", BOOK).add(
+                Move("Bc4", BOOK, "Bishop's opening").add(
+                    Move("Nf6", BOOK).add(
+                        Move("Nc3", BOOK).add(
+                            Move("Nc6", BOOK).add(
+                                Move("Nf3", BOOK).add(
+                                    Move("a6", GOOD),
+                                    Move("Nxe4", BEST)
+                                )
+                            )
+                        )
+                    )
+                ),
                 Move("Nf3", BOOK).add(
                     Move("Nc6", BOOK).add(
                         Move("Bc4", BOOK, "Last book move").add(
