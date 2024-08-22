@@ -305,6 +305,10 @@ fun loadAI() {
                         )
                     )
                 )
+            ),
+            Move("Nc6", BOOK, "Nimzowitsch Defense").add(
+                Move("Bc4", GOOD),
+                Move("d4", BEST)
             )
         ),
         Move("d4", BOOK, "Queen's Pawn Opening").add(
