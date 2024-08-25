@@ -151,6 +151,10 @@ fun loadAI() {
                     Move("Nc6", BOOK).add(
                         Move("Nf3", BEST),
                         Move("Qh5", GOOD)
+                    ),
+                    Move("Qh4", GOOD).add(
+                        Move("Nf3", GOOD),
+                        Move("Qe2", BEST)
                     )
                 ),
                 Move("Nc3", BOOK).add(
