@@ -78,6 +78,7 @@ fun loadAI() {
             ),
             Move("d5", BOOK, "Scandinavian Defense").add(
                 Move("e5", BOOK, "Last book move").add(
+                    Move("c5", BEST),
                     Move("d4", EXCELLENT).add(
                         Move("Nf3", BEST).add(
                             Move("Nc6", BEST).add(
@@ -85,6 +86,18 @@ fun loadAI() {
                                     Move("Qd5", GOOD).add(
                                         Move("Bc4", BEST),
                                         Move("Bb2", MISTAKE)
+                                    )
+                                )
+                            )
+                        )
+                    ),
+                    Move("Nc6", EXCELLENT).add(
+                        Move("d4", EXCELLENT).add(
+                            Move("f6", BOOK, "Last book move").add(
+                                Move("f4", BEST).add(
+                                    Move("Nh6", EXCELLENT).add(
+                                        Move("Be2", BEST),
+                                        Move("h3", INACCURACY)
                                     )
                                 )
                             )
