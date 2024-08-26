@@ -344,6 +344,13 @@ fun loadAI() {
                             )
                         )
                     )
+                ),
+                Move("Nc3", BOOK, "King's Fianchetto Opening").add(
+                    Move("Nc6", GOOD).add(
+                        Move("e4", BEST),
+                        Move("g3", GOOD)
+                    ),
+                    Move("Nf6", BEST)
                 )
             ),
             Move("Nc6", BOOK, "Mikėnas Defense").add(
