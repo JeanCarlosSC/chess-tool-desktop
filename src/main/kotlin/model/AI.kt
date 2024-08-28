@@ -101,6 +101,34 @@ fun loadAI() {
                                     )
                                 )
                             )
+                        ),
+                        Move("Nf3", GOOD).add(
+                            Move("f6", EXCELLENT).add(
+                                Move("d4", BEST).add(
+                                    Move("Bg4", BEST).add(
+                                        Move("Bb5", BEST),
+                                        Move("Be2", GOOD).add(
+                                            Move("Bxf3", EXCELLENT).add(
+                                                Move("Bxf3", BEST).add(
+                                                    Move("fxe5", EXCELLENT).add(
+                                                        Move("dxe5", BEST).add(
+                                                            Move("Nxe5", INACCURACY).add(
+                                                                Move("Bxd5", EXCELLENT).add(
+                                                                    Move("Rc8", MISTAKE).add(
+                                                                        Move("Bxb7", INACCURACY),
+                                                                        Move("Qh5+", BEST)
+                                                                    )
+                                                                ),
+                                                                Move("Qxd5", BEST)
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
                         )
                     )
                 ),
