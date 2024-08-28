@@ -179,6 +179,19 @@ fun loadAI() {
             ),
             Move("e5", BOOK).add(
                 Move("Bc4", BOOK, "Bishop's opening").add(
+                    Move("Nc6", BOOK).add(
+                        Move("Nf3", BOOK).add(
+                            Move("d6", BOOK, "Last book move").add(
+                                Move("d3", GOOD).add(
+                                    Move("Bg4", GOOD).add(
+                                        Move("c3", BEST),
+                                        Move("Nc3", INACCURACY)
+                                    )
+                                )
+                            )
+                        ),
+                        Move("Qh5", GOOD)
+                    ),
                     Move("Nf6", BOOK).add(
                         Move("Nc3", BOOK).add(
                             Move("Nc6", BOOK).add(
@@ -188,10 +201,6 @@ fun loadAI() {
                                 )
                             )
                         )
-                    ),
-                    Move("Nc6", BOOK).add(
-                        Move("Nf3", BEST),
-                        Move("Qh5", GOOD)
                     ),
                     Move("Qh4", GOOD).add(
                         Move("Nf3", GOOD),
