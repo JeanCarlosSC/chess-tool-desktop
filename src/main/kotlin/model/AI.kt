@@ -235,6 +235,23 @@ fun loadAI() {
                     ),
                     Move("Nf6", BOOK).add(
                         Move("Nc3", BOOK).add(
+                            Move("Bc5", BOOK).add(
+                                Move("d3", BOOK).add(
+                                    Move("Nc6", BOOK).add(
+                                        Move("Nf3", BOOK).add(
+                                            Move("d6", BOOK).add(
+                                                Move("Bg5", BOOK, "Last book move: Giuoco Piano Game").add(
+                                                    Move("Nd4", BEST),
+                                                    Move("O-O", INACCURACY).add(
+                                                        Move("Bxf6", INACCURACY),
+                                                        Move("Nd5", BEST)
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            ),
                             Move("Nc6", BOOK).add(
                                 Move("Nf3", BOOK).add(
                                     Move("a6", GOOD),
