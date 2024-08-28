@@ -24,7 +24,11 @@ class Move (
     override fun toString(): String {
         var str = ""
         for (move in moves) {
-            str += "\n • ${move.position} ${move.getType()} (${move.additionalInfo})"
+            var moveName = ""
+            if(move.additionalInfo != "") {
+                moveName = "(${move.additionalInfo})"
+            }
+            str += "\n • ${move.position} ${move.getType()} $moveName"
         }
         return str
     }
