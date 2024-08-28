@@ -193,6 +193,31 @@ fun loadAI() {
                     )
                 )
             ),
+            Move("d6", BOOK).add(
+                Move("d4", BOOK).add(
+                    Move("g6", BOOK).add(
+                        Move("Nf3", BOOK).add(
+                            Move("Bg7", BOOK).add(
+                                Move("Nc3", BOOK).add(
+                                    Move("Nf6", BOOK).add(
+                                        Move("Bg5", BOOK).add(
+                                            Move("O-O", BOOK, "Last book move: Pirc Defense Opening").add(
+                                                Move("Bc4", GOOD).add(
+                                                    Move("Bg4", GOOD).add(
+                                                        Move("Bxf6", INACCURACY),
+                                                        Move("h3", BEST)
+                                                    )
+                                                ),
+                                                Move("Qd2", BEST)
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
             Move("e5", BOOK).add(
                 Move("Bc4", BOOK, "Bishop's opening").add(
                     Move("Nc6", BOOK).add(
