@@ -22,6 +22,22 @@ fun loadAI() {
                         )
                     )
                 ),
+                Move("c3", BOOK).add(
+                    Move("Nc6", BOOK, "Last book move").add(
+                        Move("d3", GOOD).add(
+                            Move("e5", BEST).add(
+                                Move("Nf3", BEST).add(
+                                    Move("d5", BEST).add(
+                                        Move("d4", INACCURACY).add(
+                                            Move("dxe4", INACCURACY),
+                                            Move("exd4", BEST)
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                ),
                 Move("Nf3", BOOK).add(
                     Move("d5", INACCURACY),
                     Move("d6", BOOK).add(
