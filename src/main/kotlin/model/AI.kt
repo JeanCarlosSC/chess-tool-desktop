@@ -221,6 +221,67 @@ fun loadAI() {
             Move("e5", BOOK).add(
                 Move("Bc4", BOOK, "Bishop's opening").add(
                     Move("Nc6", BOOK).add(
+                        Move("Bxf7+", BLUNDER).add(
+                            Move("Kxf7", BEST).add(
+                                Move("Qf3+", INACCURACY).add(
+                                    Move("Nf6", BEST),
+                                    Move("Qf6", GOOD).add(
+                                        Move("Qxf6+", GOOD).add(
+                                            Move("Nxf6", EXCELLENT).add(
+                                                Move("Nc3", BEST).add(
+                                                    Move("d6", BEST).add(
+                                                        Move("Nf3", EXCELLENT).add(
+                                                            Move("Bg4", BEST).add(
+                                                                Move("Ng5+", EXCELLENT).add(
+                                                                    Move("Kg8", BEST).add(
+                                                                        Move("O-O", EXCELLENT).add(
+                                                                            Move("h6", EXCELLENT).add(
+                                                                                Move("f3", EXCELLENT).add(
+                                                                                    Move("hxg5", GOOD).add(
+                                                                                        Move("fxg4", BEST).add(
+                                                                                            Move("Nxg4", EXCELLENT).add(
+                                                                                                Move("h3", BEST).add(
+                                                                                                    Move("Nf6", EXCELLENT).add(
+                                                                                                        Move("d3", BEST).add(
+                                                                                                            Move("Nd4", BEST).add(
+                                                                                                                Move("Bxg5", BEST).add(
+                                                                                                                    Move("Nxc2", EXCELLENT).add(
+                                                                                                                        Move("Rac1", BEST).add(
+                                                                                                                            Move("Nb4", EXCELLENT).add(
+                                                                                                                                Move("Bxf6", BEST).add(
+                                                                                                                                    Move("gxf6", BEST).add(
+                                                                                                                                        Move("Rxf6", EXCELLENT).add(
+                                                                                                                                            Move("Nxa2", BLUNDER),
+                                                                                                                                            Move("Nxd3", BEST)
+                                                                                                                                        )
+                                                                                                                                    )
+                                                                                                                                )
+                                                                                                                            )
+                                                                                                                        )
+                                                                                                                    )
+                                                                                                                )
+                                                                                                            )
+                                                                                                        )
+                                                                                                    )
+                                                                                                )
+                                                                                            )
+                                                                                        )
+                                                                                    )
+                                                                                )
+                                                                            )
+                                                                        )
+                                                                    )
+                                                                )
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        ),
                         Move("Nf3", BOOK).add(
                             Move("d6", BOOK, "Last book move").add(
                                 Move("d3", GOOD).add(
