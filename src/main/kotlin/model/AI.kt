@@ -100,6 +100,34 @@ fun loadAI() {
                     )
                 )
             ),
+            Move("c6", BOOK, "Caro-Kann Defense").add(
+                Move("Nc3", BOOK, "Last book move: Caro-Kann Defense opening").add(
+                    Move("e5", GOOD).add(
+                        Move("Nf3", EXCELLENT).add(
+                            Move("f6", INACCURACY).add(
+                                Move("d4", GOOD).add(
+                                    Move("d5", INACCURACY).add(
+                                        Move("exd5", GOOD).add(
+                                            Move("Bb4", EXCELLENT).add(
+                                                Move("dxe5", BEST).add(
+                                                    Move("cxd5", GOOD).add(
+                                                        Move("Bb5+", BEST).add(
+                                                            Move("Kf8", GOOD).add(
+                                                                Move("Nd4", MISTAKE),
+                                                                Move("O-O", BEST)
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            ),
             Move("d5", BOOK, "Scandinavian Defense").add(
                 Move("e5", BOOK, "Last book move").add(
                     Move("c5", BEST),
