@@ -355,6 +355,18 @@ fun loadAI() {
                             )
                         )
                     ),
+                    Move("Qe7", INACCURACY).add(
+                        Move("Nc3", EXCELLENT).add(
+                            Move("c6", GOOD).add(
+                                Move("d4", GOOD).add(
+                                    Move("b5", GOOD).add(
+                                        Move("Bb3", BEST)
+                                    )
+                                )
+                            )
+                        ),
+                        Move("Nf3", BEST)
+                    ),
                     Move("Qh4", GOOD).add(
                         Move("Nf3", GOOD),
                         Move("Qe2", BEST).add(
