@@ -8,6 +8,14 @@ fun loadAI() {
             Move("c5", BOOK, "Sicilian Defense").add(
                 Move("Bc4", BOOK, "Bowdler Attack").add(
                     Move("e6", BOOK, "Last book move").add(
+                        Move("Nc3", BOOK, "Last book move").add(
+                            Move("Nf6", EXCELLENT).add(
+                                Move("Qf3", GOOD).add(
+                                    Move("g6", INACCURACY),
+                                    Move("Nc6", BEST)
+                                )
+                            )
+                        ),
                         Move("Nf3", BEST).add(
                             Move("d5", EXCELLENT).add(
                                 Move("exd5", EXCELLENT).add(
