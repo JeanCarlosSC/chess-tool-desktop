@@ -288,6 +288,19 @@ fun loadAI() {
                 ),
                 Move("Nf3", BOOK).add(
                     Move("Nc6", BOOK).add(
+                        Move("Bb5", BOOK, "Ruy Lopez Opening").add(
+                            Move("Nf6", BOOK).add(
+                                Move("Bxc6", BOOK, "Last book move: Ruy Lopez Opening").add(
+                                    Move("bxc6", EXCELLENT).add(
+                                        Move("Nxe5", INACCURACY).add(
+                                            Move("Nxe4", INACCURACY),
+                                            Move("Qe7", BEST)
+                                        )
+                                    ),
+                                    Move("dxc6", BEST)
+                                )
+                            )
+                        ),
                         Move("Bc4", BOOK, "Last book move").add(
                             Move("h6", GOOD).add(
                                 Move("d4", BEST).add(
