@@ -321,6 +321,10 @@ fun loadAI() {
                                     )
                                 )
                             ),
+                            Move("d6", BOOK, "Last book move: Vienna Game opening").add(
+                                Move("Nd5", INACCURACY),
+                                Move("Nf3", BEST)
+                            ),
                             Move("Nc6", BOOK).add(
                                 Move("Nf3", BOOK).add(
                                     Move("a6", GOOD),
