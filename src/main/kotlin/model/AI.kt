@@ -433,6 +433,10 @@ fun loadAI() {
                                         )
                                     ),
                                     Move("dxc6", BEST)
+                                ),
+                                Move("d3", BOOK, "Last book move: Ruy Lopez Opening").add(
+                                    Move("Bc5", BEST),
+                                    Move("d5", INACCURACY)
                                 )
                             )
                         ),
