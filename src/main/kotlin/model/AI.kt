@@ -442,9 +442,16 @@ fun loadAI() {
                         )
                     )
                 ),
-                Move("Qh5", GOOD).add(
+                Move("Qh5", EXCELLENT).add(
                     Move("Bb4", BLUNDER).add(
                         Move("Qxe5+", BEST)
+                    ),
+                    Move("Qe7", EXCELLENT).add(
+                        Move("Bc4", BEST).add(
+                            Move("Nf6", EXCELLENT).add(
+                                Move("Qf3", EXCELLENT)
+                            )
+                        )
                     )
                 )
             ),
