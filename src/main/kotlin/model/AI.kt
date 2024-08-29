@@ -614,6 +614,18 @@ fun loadAI() {
                 )
             )
         ),
+        Move("g4", BOOK).add(
+            Move("e5", BOOK, "Last book move: Grob Opening").add(
+                Move("Bh3", MISTAKE).add(
+                    Move("Bc5", GOOD).add(
+                        Move("d3", EXCELLENT).add(
+                            Move("Nc6", BEST),
+                            Move("Qh4", INACCURACY)
+                        )
+                    )
+                )
+            )
+        ),
         Move("Nc3", BOOK).add(
             Move("d5", BEST),
             Move("Nc6", GOOD)
