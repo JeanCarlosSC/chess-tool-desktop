@@ -323,7 +323,29 @@ fun loadAI() {
                             ),
                             Move("d6", BOOK, "Last book move: Vienna Game opening").add(
                                 Move("Nd5", INACCURACY),
-                                Move("Nf3", BEST)
+                                Move("Nf3", BOOK, "Last book move: Vienna Game Opening").add(
+                                    Move("Bg4", EXCELLENT).add(
+                                        Move("d3", EXCELLENT).add(
+                                            Move("c6", GOOD).add(
+                                                Move("Bg5", GOOD).add(
+                                                    Move("h6", BEST).add(
+                                                        Move("Bxf6", GOOD).add(
+                                                            Move("Qxf6", BEST).add(
+                                                                Move("h3", BEST).add(
+                                                                    Move("d5", MISTAKE).add(
+                                                                        Move("Bb3", MISS),
+                                                                        Move("exd5", BEST)
+                                                                    )
+                                                                )
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        ),
+                                        Move("h3", BEST)
+                                    )
+                                )
                             ),
                             Move("Nc6", BOOK).add(
                                 Move("Nf3", BOOK).add(
