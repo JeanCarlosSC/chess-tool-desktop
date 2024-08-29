@@ -383,7 +383,7 @@ fun loadAI() {
                             )
                         )
                     ),
-                    Move("Qe7", INACCURACY).add(
+                    Move("Qe7", GOOD).add(
                         Move("Nc3", EXCELLENT).add(
                             Move("c6", GOOD).add(
                                 Move("d4", GOOD).add(
@@ -393,7 +393,28 @@ fun loadAI() {
                                 )
                             )
                         ),
-                        Move("Nf3", BEST)
+                        Move("Nf3", BEST).add(
+                            Move("Nc6", EXCELLENT).add(
+                                Move("d3", GOOD).add(
+                                    Move("Nf6", BEST).add(
+                                        Move("Nc3", EXCELLENT).add(
+                                            Move("g6", INACCURACY).add(
+                                                Move("Bg5", BEST).add(
+                                                    Move("Bg7", BEST).add(
+                                                        Move("Nd5", GOOD).add(
+                                                            Move("Qd8", GOOD).add(
+                                                                Move("O-O", INACCURACY),
+                                                                Move("Qd2", BEST)
+                                                            )
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
                     ),
                     Move("Qh4", GOOD).add(
                         Move("Nf3", GOOD),
